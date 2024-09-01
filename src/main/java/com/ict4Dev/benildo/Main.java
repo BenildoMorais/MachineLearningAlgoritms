@@ -28,7 +28,6 @@ public class Main {
         dataset.randomize(new java.util.Random(0));
 
         // Split the dataset into training and testing sets (80:20 split)
-        int seed = 1;
         int trainSize = (int) Math.round(dataset.numInstances() * 0.8);
         int testSize = dataset.numInstances() - trainSize;
         Instances trainSet = new Instances(dataset, 0, trainSize);
