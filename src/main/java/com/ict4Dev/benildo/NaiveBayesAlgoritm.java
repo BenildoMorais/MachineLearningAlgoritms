@@ -4,13 +4,13 @@ import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
-import weka.filters.Filter;
-import weka.filters.unsupervised.attribute.NumericToNominal;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class Main {
+//First in this class we made a simple naive bayes model and evaluation
+//Now we compare the Naive bayes and Decision Tree Algorithm
+
+public class NaiveBayesAlgoritm {
     public static void main(String[] args) throws Exception {
         // Load the dataset
         BufferedReader reader = new BufferedReader(new FileReader("caracteristicas.arff"));
@@ -28,7 +28,6 @@ public class Main {
         dataset.randomize(new java.util.Random(0));
 
         // Split the dataset into training and testing sets (80:20 split)
-        int seed = 1;
         int trainSize = (int) Math.round(dataset.numInstances() * 0.8);
         int testSize = dataset.numInstances() - trainSize;
         Instances trainSet = new Instances(dataset, 0, trainSize);
