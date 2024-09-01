@@ -1,0 +1,1 @@
+### In This project we Made a comparation between Naive Bayes and Decion Tree using dataset of simson characteristics 
